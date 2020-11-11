@@ -1,0 +1,33 @@
+{
+  "include": ["./**/*.ts"],  //指定一个匹配列表（属于自动指定该路径下的所有ts相关文件）
+  "compilerOptions": {
+    "target": "ESNext", // 编译的目标是什么版本的
+    "module": "esnext", // 指定生成哪个模块系统代码
+    "moduleResolution": "node",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "strictFunctionTypes": false,
+    "jsx": "react", // 在 .tsx文件里面支持jsx
+    "baseUrl": ".",// 工作的根目录
+    "allowJs": true, // 允许编译JavaScript文件
+    "esModuleInterop": true, //
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": false, // 是否默认禁用 any
+    "removeComments": false, // 是否移除注释
+    "experimentalDecorators": true,
+    "outDir": "./dist", // 输出目录
+    "lib": [ // 编译过程中需要引入的库文件的列表
+			"dom",
+			"esnext"
+    ],
+    "incremental": true,
+    "skipLibCheck": true,
+    "paths": {
+			"/@/*": [
+				"src/*"
+			]
+    }
+  }
+}
