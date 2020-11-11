@@ -51,9 +51,9 @@ const viteConfig: UserConfig = {
   //     javascriptEnabled: true,
   //   },
   // },
-  optimizeDeps: {
-    include: ['echarts/map/js/china', 'ant-design-vue/es/locale/zh_CN', '@ant-design/icons-vue'],
-  },
+  // optimizeDeps: {
+  //   include: ['echarts/map/js/china', 'ant-design-vue/es/locale/zh_CN', '@ant-design/icons-vue'],
+  // },
   proxy: createProxy(VITE_PROXY),
   // plugins: createVitePlugins(viteEnv),
 }
