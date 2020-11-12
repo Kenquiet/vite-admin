@@ -1,4 +1,4 @@
-import type { Menu, MenuModule } from '/@/router/types';
+import type { Menu, MenuModule } from './types';
 import type { RouteRecordNormalized } from 'vue-router';
 import { appStore } from '/@/store/modules/app';
 import { permissionStore } from '/@/store/modules/permission';
