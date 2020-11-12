@@ -1,5 +1,5 @@
 <template>
-  <div>收货管理</div>
+  <div>包裹接收</div>
 </template>
 
 <script lang="ts">
