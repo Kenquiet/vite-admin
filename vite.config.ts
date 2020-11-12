@@ -5,6 +5,7 @@ import { createProxy } from './build/vite/proxy';
 import globbyTransform from './build/vite/plugin/context/transform'; // 文件解析函数
 import dynamicImportTransform from './build/vite/plugin/dynamicImport'; // 动态引入函数
 import { isDevFn, loadEnv } from './build/utils';
+import { modifyVars } from './build/config/lessModifyVars';
 
 const pkg = require('./package.json');
 
@@ -45,15 +46,15 @@ const viteConfig: UserConfig = {
   define: {
     __VERSION__: pkg.version,
   },
-  // cssPreprocessOptions: {
-  //   less: {
-  //     modifyVars: modifyVars,
-  //     javascriptEnabled: true,
-  //   },
-  // },
-  // optimizeDeps: {
-  //   include: ['echarts/map/js/china', 'ant-design-vue/es/locale/zh_CN', '@ant-design/icons-vue'],
-  // },
+  cssPreprocessOptions: {
+    less: {
+      modifyVars: modifyVars,
+      javascriptEnabled: true,
+    },
+  },
+  optimizeDeps: {
+    include: ['echarts/map/js/china', 'ant-design-vue/es/locale/zh_CN', '@ant-design/icons-vue'],
+  },
   proxy: createProxy(VITE_PROXY),
   // plugins: createVitePlugins(viteEnv),
 }

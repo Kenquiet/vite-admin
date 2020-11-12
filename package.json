@@ -2,9 +2,12 @@
   "name": "vite-admin",
   "version": "0.0.0",
   "scripts": {
+    "bootstrap": "yarn install",
     "serve": "esno ./build/script/preserve.ts && cross-env NODE_ENV=development vite",
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "log": "esno ./build/script/changelog.ts",
+    "reinstall": "rimraf yarn.lock && rimraf package.lock.json && rimraf node_modules && npm run bootstrap"
   },
   "dependencies": {
     "typescript": "^4.0.5",
@@ -69,7 +72,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^7.1.0",
     "prettier": "^2.1.2",
-    "vite": "^1.0.0-rc.8",
+    "vite": "^1.0.0-rc.9",
     "yargs": "^16.1.0"
   }
 }
