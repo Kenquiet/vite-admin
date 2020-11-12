@@ -2,7 +2,7 @@ import type { UserConfig } from 'vite';
 
 import { resolve } from 'path';
 import { createProxy } from './build/vite/proxy';
-import globbyTransform from './build/vite/plugin/transform'; // 文件解析函数
+import globbyTransform from './build/vite/plugin/context/transform'; // 文件解析函数
 import dynamicImportTransform from './build/vite/plugin/dynamicImport'; // 动态引入函数
 import { isDevFn, loadEnv } from './build/utils';
 
